@@ -31,6 +31,17 @@ case $1 in
 <% end %>
 <% end %>
 
+<% if_p('k3s.kubelet-arg') do |value| %>
+<% p('k3s.kubelet-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kubelet-arg=<%= flag %>"
+<% end %>
+<% end %>
+
+<% if_p('k3s.kube-proxy-arg') do |value| %>
+<% p('k3s.kube-proxy-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kube-proxy-arg=<%= flag %>"
+<% end %>
+<% end %>
 
 
     exec  /var/vcap/packages/k3s/k3s agent \

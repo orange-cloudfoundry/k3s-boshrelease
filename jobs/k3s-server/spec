@@ -135,7 +135,22 @@ properties:
   k3s.datastore-keyfile:
     description: TLS key file used to secure datastore backend communication
 
+## args
+  k3s.kube-apiserver-arg:
+    description: (flags) Customized flag for kube-apiserver process
+    default: []
 
+  k3s.kube-scheduler-arg:
+    description: (flags) Customized flag for kube-scheduler process
+    default: []
+
+  k3s.kube-controller-manager-arg:
+    description: (flags) Customized flag for kube-controller-manager process
+    default: []
+
+  k3s.kube-cloud-controller-manager-arg:
+    description:  (flags) Customized flag for kube-cloud-controller-manager process
+    default: []
 
 
 #done    
@@ -147,19 +162,18 @@ properties:
 #   --datastore-cafile value                   (db) TLS Certificate Authority file used to secure datastore backend communication [$K3S_DATASTORE_CAFILE]
 #   --datastore-certfile value                 (db) TLS certification file used to secure datastore backend communication [$K3S_DATASTORE_CERTFILE]
 #   --datastore-keyfile value                  (db) TLS key file used to secure datastore backend communication [$K3S_DATASTORE_KEYFILE]
-
-#todo
-#   --tls-san value                            (listener) Add additional hostname or IP as a Subject Alternative Name in the TLS cert
-
 #   --kube-apiserver-arg value                 (flags) Customized flag for kube-apiserver process
 #   --kube-scheduler-arg value                 (flags) Customized flag for kube-scheduler process
 #   --kube-controller-manager-arg value        (flags) Customized flag for kube-controller-manager process
 #   --kube-cloud-controller-manager-arg value  (flags) Customized flag for kube-cloud-controller-manager process
+#   --kubelet-arg value                        (agent/flags) Customized flag for kubelet process
+#   --kube-proxy-arg value                     (agent/flags) Customized flag for kube-proxy process
+
+#todo
+#   --tls-san value                            (listener) Add additional hostname or IP as a Subject Alternative Name in the TLS cert
 #   --node-name value                          (agent/node) Node name [$K3S_NODE_NAME]
 #   --with-node-id                             (agent/node) Append id to node name
 #   --docker                                   (agent/runtime) Use docker instead of containerd
 #   --node-ip value, -i value                  (agent/networking) IP address to advertise for node
 #   --node-external-ip value                   (agent/networking) External IP address to advertise for node
-#   --kubelet-arg value                        (agent/flags) Customized flag for kubelet process
-#   --kube-proxy-arg value                     (agent/flags) Customized flag for kube-proxy process
 

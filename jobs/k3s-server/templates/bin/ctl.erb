@@ -48,6 +48,31 @@ case $1 in
 <% end %>
 <% end %>
 
+<% if_p('k3s.kube-apiserver-arg') do |value| %>
+<% p('k3s.kube-apiserver-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kube-apiserver-arg=<%= flag %>"
+<% end %>
+<% end %>
+
+<% if_p('k3s.kube-scheduler-arg') do |value| %>
+<% p('k3s.kube-scheduler-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kube-scheduler-arg=<%= flag %>"
+<% end %>
+<% end %>
+
+<% if_p('k3s.kube-controller-manager-arg') do |value| %>
+<% p('k3s.kube-controller-manager-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kube-controller-manager-arg=<%= flag %>"
+<% end %>
+<% end %>
+
+<% if_p('k3s.kube-cloud-controller-manager-arg') do |value| %>
+<% p('k3s.kube-cloud-controller-manager-arg').each do |flag| %>
+    export FLAGS="$FLAGS --kube-cloud-controller-manager-arg=<%= flag %>"
+<% end %>
+<% end %>
+
+
     echo $$ > $PIDFILE
       
     exec  /var/vcap/packages/k3s/k3s server \

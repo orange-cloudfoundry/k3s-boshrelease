@@ -105,3 +105,15 @@ properties:
   k3s.drain.selector:  #Not implemented
     description: Selector (label query) to filter on
 
+
+## args
+
+  k3s.kubelet-arg:
+    description: (agent/flags) Customized flag for kubelet process
+    default: []
+
+
+  k3s.kube-proxy-arg:
+    description: (agent/flags) Customized flag for kube-proxy process
+    default: []
+
