@@ -89,7 +89,7 @@ case $1 in
     --private-registry=/var/vcap/jobs/k3s-server/config/registries.yaml \
     --write-kubeconfig=/var/vcap/store/k3s-server/k3s.yaml \
     --write-kubeconfig-mode=755 \
-    --tls-san=<%= spec.ip %>,<%= spec.index %>.<%= spec.name %>.<%= spec.networks.send(spec.networks.methods(false).first).name %>.<%= spec.deployment.bosh %> \
+    --tls-san=<%= spec.ip %>,<%= spec.index %>.<%= spec.name %>.<%= spec.networks.send(spec.networks.methods(false).first).name %>.<%= spec.deployment %>.bosh \
     --node-external-ip=<%= spec.ip %> \
     --node-label bosh.io/az=<%= spec.az %> \
     --node-label bosh.io/name=<%= spec.name %>  \
