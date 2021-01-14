@@ -29,6 +29,11 @@ case $1 in
     export K3S_DATASTORE_KEYFILE=/var/vcap/jobs/k3s-server/config/datastore-keyfile 
     <% end %>
     
+    <% if_p('k3s.token-file-content') do |value| %>
+    export K3S_TOKEN_FILE=/var/vcap/jobs/k3s-server/config/token.csv
+    <% end %>
+    
+    
     export FLAGS=""
 <% if_p('k3s.disable') do |value| %>
 <% p('k3s.disable').each do |components| %>

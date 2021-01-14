@@ -18,6 +18,7 @@ templates:
   config/registry.ca.erb: config/registry.ca
   config/registry.cert.erb: config/registry.cert
   config/registry.key.erb: config/registry.key
+  config/token.csv.erb: config/token.csv
   bin/envrc: bin/envrc
   bin/setup-user-env.erb: bin/setup-user-env
   bin/k3s-killall.sh: bin/k3s-killall.sh
@@ -151,6 +152,12 @@ properties:
   k3s.kube-cloud-controller-manager-arg:
     description:  (flags) Customized flag for kube-cloud-controller-manager process
     default: []
+
+#token-file
+  k3s.token-file-content:
+    description: token-file content. see https://kubernetes.io/docs/reference/access-authn-authz/authentication/#static-token-file
+
+
 
 
 #done    
