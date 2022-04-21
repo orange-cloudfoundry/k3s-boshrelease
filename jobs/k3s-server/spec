@@ -225,7 +225,7 @@ properties:
         - level: Metadata
           resources:
           - group: "" # core API group
-            resources: ["secrets", "configmaps"]
+            resources: ["secrets", "configmaps","serviceaccounts/token"] #see https://github.com/kubernetes/kubernetes/issues/98612#issuecomment-962088315
         # Log all other resources in core and extensions at the Request level.
         - level: Request
           resources:
