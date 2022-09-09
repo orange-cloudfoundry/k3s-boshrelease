@@ -1,6 +1,51 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:base",
+    ":disableRateLimiting"
+  ],
+
+  "ignorePaths": [
+    "packages/**",
+    "releases/**",
+    "manifests/**",
+    "jobs/**"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["github-releases"],
+      "matchManagers": ["regex"],
+      "matchPaths": ["vendir.yml"],
+      "addLabels": ["vendir", "github-release"]
+    },
+    {
+      "matchDatasources": ["github-tags"],
+      "matchManagers": ["regex"],
+      "matchPaths": ["vendir.yml"],
+      "addLabels": ["vendir", "github-tags"]
+    }
+  ],
+
+  "regexManagers": [
+    {
+      "description": "https://regex101.com/r/ms9hZL/1",
+      "fileMatch": ["vendir.yml$"],
+      "matchStrings": [
+        " +githubRelease:\\n +slug: (?<depName>[a-z0-9\\.\\/\\-]*?)\\n +tag: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
+      ],
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+    },
+    {
+      "description": "https://regex101.com/r/boCv4J/1",
+      "fileMatch": ["vendir.yml$"],
+      "matchStrings": [
+        " +git:\\n +url: https:\\/\\/github\\.com\\/(?<depName>[a-z0-9\\.\\/\\-:]*?)\\n +ref: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
+      ],
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+    }
   ]
+
 }
+
