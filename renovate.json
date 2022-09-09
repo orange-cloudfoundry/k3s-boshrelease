@@ -28,22 +28,21 @@
 
   "regexManagers": [
     {
-      "description": "https://regex101.com/r/ms9hZL/1",
+      "description": "https://regex101.com/r/ms9hZL/1 for matchstring and https://regex101.com/r/NVqoci/1 for version",
       "fileMatch": ["vendir.yml$"],
       "matchStrings": [
         " +githubRelease:\\n +slug: (?<depName>[a-z0-9\\.\\/\\-]*?)\\n +tag: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
       ],
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<build>[a-z0-9]+))?(\\+(?<compatibility>[a-z0-9]+))?$"
     },
     {
-      "description": "https://regex101.com/r/boCv4J/1 for matchstring and https://regex101.com/r/NVqoci/1 for version",
       "fileMatch": ["vendir.yml$"],
       "matchStrings": [
         " +git:\\n +url: https:\\/\\/github\\.com\\/(?<depName>[a-z0-9\\.\\/\\-:]*?)\\n +ref: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-(?<build>[a-z0-9]+))?(\\+(?<compatibility>[a-z0-9]+))?$"
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
     }
   ]
 
