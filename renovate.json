@@ -43,7 +43,7 @@
         " +git:\\n +url: https:\\/\\/github\\.com\\/(?<depName>[a-z0-9\\.\\/\\-:]*?)\\n +ref: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+(\\+[a-z0-9]+)?)?$"
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<compatibility>\\+[a-z0-9]+)?$"
     }
   ]
 
