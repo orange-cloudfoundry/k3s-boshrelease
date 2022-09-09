@@ -37,13 +37,13 @@
       "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
     },
     {
-      "description": "https://regex101.com/r/boCv4J/1",
+      "description": "https://regex101.com/r/boCv4J/1 for matchstring and https://regex101.com/r/2UIdTS/1 for version",
       "fileMatch": ["vendir.yml$"],
       "matchStrings": [
         " +git:\\n +url: https:\\/\\/github\\.com\\/(?<depName>[a-z0-9\\.\\/\\-:]*?)\\n +ref: (?<currentValue>[a-z0-9\\.\\/\\-\\+]*?) *\\n"
       ],
       "datasourceTemplate": "github-tags",
-      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+      "versioningTemplate": "regex:v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+(\\+[a-z0-9]+)?)?$"
     }
   ]
 
