@@ -30,7 +30,7 @@ directories:
   - path: github.com/containerd/nerdctl
     githubRelease:
       slug: containerd/nerdctl
-      tag: v0.20.0
+      tag: v0.23.0
       disableAutoChecksumValidation: true
     includePaths:
     - "nerdctl-0.20.0-linux-amd64.tar.gz"
