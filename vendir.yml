@@ -21,7 +21,7 @@ directories:
   - path: github.com/derailed/k9s
     githubRelease:
       slug: derailed/k9s
-      tag: v0.26.7
+      tag: v0.27.3
       disableAutoChecksumValidation: true 
     includePaths:
     - "k9s_Linux_x86_64.tar.gz"
