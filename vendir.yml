@@ -11,7 +11,7 @@ directories:
   - path: github.com/k3s-io/k3s
     githubRelease:
       slug: k3s-io/k3s
-      tag: v1.24.14+k3s1 
+      tag: v1.24.16+k3s1 
       disableAutoChecksumValidation: true 
     includePaths:
     - "k3s"
