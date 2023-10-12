@@ -54,7 +54,7 @@
         'k3s-io/k3s',
       ],
       separateMinorPatch: true,
-      separateMultipleMinor: true, // Pending merge of https://github.com/renovatebot/renovate/pull/24538 to be effective
+      // separateMultipleMinor: true, // Pending merge of https://github.com/renovatebot/renovate/pull/24538 to be effective
     },
   ],
   regexManagers: [
