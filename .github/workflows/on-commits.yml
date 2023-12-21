@@ -82,7 +82,7 @@ jobs:
       # and if clause https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsif
       - name: create bosh dev release
         id: create-bosh-release
-        uses: orange-cloudfoundry/bosh-release-action@v2 # will create dev release when pushed git ref is not a tag
+        uses: orange-cloudfoundry/bosh-release-action@v6 # will create dev release when pushed git ref is not a tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           AWS_BOSH_ACCES_KEY_ID: ${{ secrets.AWS_BOSH_ACCES_KEY_ID }}
