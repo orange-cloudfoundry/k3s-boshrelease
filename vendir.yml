@@ -39,7 +39,7 @@ directories:
   - path: github.com/containerd/nerdctl
     githubRelease:
       slug: containerd/nerdctl
-      tag: v1.3.1
+      tag: v1.7.2
       disableAutoChecksumValidation: true
       assetNames: # only download specific assets (optional; v0.12.0+), see k3s declaration for details.
       - "nerdctl-1.3.1-linux-amd64.tar.gz"
