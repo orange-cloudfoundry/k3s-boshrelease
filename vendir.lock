@@ -2,12 +2,12 @@ apiVersion: vendir.k14s.io/v1alpha1
 directories:
 - contents:
   - githubRelease:
-      tag: v1.24.17
-      url: https://api.github.com/repos/kubernetes/kubernetes/releases/118493643
+      tag: v1.26.0
+      url: https://api.github.com/repos/kubernetes/kubernetes/releases/85515657
     path: kubernetes/kubectl
   - githubRelease:
-      tag: v1.24.17+k3s1
-      url: https://api.github.com/repos/k3s-io/k3s/releases/120011717
+      tag: v1.26.0+k3s1
+      url: https://api.github.com/repos/k3s-io/k3s/releases/86719319
     path: k3s-io/k3s
   - githubRelease:
       tag: v0.27.4
