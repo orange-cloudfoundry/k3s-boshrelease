@@ -22,7 +22,7 @@ directories:
   - path: k3s-io/k3s
     githubRelease:
       slug: k3s-io/k3s
-      tag: v1.24.17+k3s1 
+      tag: v1.29.0+k3s1 
       disableAutoChecksumValidation: true
       assetNames: # only download specific assets (optional; v0.12.0+). We use assetNames inside githubRelease instead of
       # includePaths at path level. Using includePaths downloads all assets and filter after.
