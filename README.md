@@ -1,4 +1,9 @@
 # BOSH release for k3s
+
+**As of Jan 10, 2024, this repo is deprecated and replaced by granular repos.** See full details into https://github.com/orange-cloudfoundry/k3s-boshrelease/discussions/195 
+
+This repo is only used to track issues for new feature requests that don't yet fit into existing granular repos and would require a new repo such as  https://github.com/orange-cloudfoundry/k3s-boshrelease/issues/86
+
 <table border="0" CELLPADDING=”10″  WIDTH=”300p″ ALIGN=”CENTER”>
   <tr>
     <th><img src="https://k3s.io/img/k3s-logo-light.svg" height="100p" alt="k3s Logo" /></th>
