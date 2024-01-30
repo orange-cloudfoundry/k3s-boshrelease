@@ -1,0 +1,65 @@
+name: k3s
+version: "124.15"
+commit_hash: 2730f6a
+uncommitted_changes: false
+jobs:
+- name: k3s-agent
+  version: 89b33fef3abb20e5c7494fb84e295092e545086c05b4ac66f765daa1e6afd944
+  fingerprint: 89b33fef3abb20e5c7494fb84e295092e545086c05b4ac66f765daa1e6afd944
+  sha1: sha256:83f44c9f2ceef6a7c522c6235a8af9d393c7d224f94c0488d0d05a663db3b05f
+  packages:
+  - k3s
+  - kubectl-k3s
+  - k3s-images
+  - nerdctl
+- name: k3s-agent-airgaped-images
+  version: dac8160deeef67d642c67065cdb584c53ca84807717f4b7abb3e748badb97313
+  fingerprint: dac8160deeef67d642c67065cdb584c53ca84807717f4b7abb3e748badb97313
+  sha1: sha256:56989c04162b348ce691ad78d9ceaefc4b46338df95ebe87fda1e5ce0a30d429
+  packages:
+  - k3s-images
+- name: k3s-server
+  version: 6bb4438fc82ee9b8380ae30e7d6877af0f7dcfef97e643a844b0e68191e986cf
+  fingerprint: 6bb4438fc82ee9b8380ae30e7d6877af0f7dcfef97e643a844b0e68191e986cf
+  sha1: sha256:d48ba14c7f60ab6beeea146bafb0452d256c4f0c57531a454ebe8068254560b7
+  packages:
+  - k3s
+  - k9s
+  - kubectl-k3s
+  - nerdctl
+- name: k3s-server-airgaped-images
+  version: 3e8cc00744f582f54235a554c9a5a1bcbc16c8848330d8b17fbe1ab270f7d2ef
+  fingerprint: 3e8cc00744f582f54235a554c9a5a1bcbc16c8848330d8b17fbe1ab270f7d2ef
+  sha1: sha256:fbae88a6d6e06d8ac29288b73a971832e77d2483978c56481844e1c7f8e77c78
+  packages:
+  - k3s-images
+packages:
+- name: k3s
+  version: 68ae280a60d525fde827d29f607ded3cba04b62ab7d8a0f823a982214a601ef3
+  fingerprint: 68ae280a60d525fde827d29f607ded3cba04b62ab7d8a0f823a982214a601ef3
+  sha1: sha256:579cfa090faeed6a6063c592b149538d6d9732dbeb33d0cf222035d96a46ba1f
+  dependencies: []
+- name: k3s-images
+  version: ee54d82c584dc843cc3d741749812b26b8b654cdfeb14a50a4bc841cd38c890b
+  fingerprint: ee54d82c584dc843cc3d741749812b26b8b654cdfeb14a50a4bc841cd38c890b
+  sha1: sha256:63e77a6226b02ec64d6dc44b3fc5796a76e40d4056d72d4710c759c00e098b3d
+  dependencies: []
+- name: k9s
+  version: 5950fdb3fe5cf31d54de992dd8dfdb17bc43eca03901b375c7e54ed89203966b
+  fingerprint: 5950fdb3fe5cf31d54de992dd8dfdb17bc43eca03901b375c7e54ed89203966b
+  sha1: sha256:d0ad55e5c5f85d986c15346247d9dec6f5b2712a5a81ebb8af80c9b5676c23a4
+  dependencies: []
+- name: kubectl-k3s
+  version: 7ad3a6f1733dd6068d1f380ffff2daeaec2d7bbefdc297873854c55eec287f86
+  fingerprint: 7ad3a6f1733dd6068d1f380ffff2daeaec2d7bbefdc297873854c55eec287f86
+  sha1: sha256:0325c1d22e341d13c91abf7df05c31c3df8effa6da3c3d0bca3920e26edca721
+  dependencies: []
+- name: nerdctl
+  version: 3ef7aaf0a97b5ea75f13913f2c73609b90e9fb46695d743c2acedd5d0d9e4eb4
+  fingerprint: 3ef7aaf0a97b5ea75f13913f2c73609b90e9fb46695d743c2acedd5d0d9e4eb4
+  sha1: sha256:beb08f27a3f548472c8c0edee96e813fba538d7e4b2229325e5262cc30aa7d30
+  dependencies: []
+license:
+  version: cf0ca1fe65dee9607c7bb9460a3f20835e582cbb7f5b2c3625fba2e21d7e91b9
+  fingerprint: cf0ca1fe65dee9607c7bb9460a3f20835e582cbb7f5b2c3625fba2e21d7e91b9
+  sha1: sha256:cbe3175489dfaec91e9f392399fbfb68e008885feb91a3b8d493a35d2fc5a8fa

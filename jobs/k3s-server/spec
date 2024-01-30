@@ -11,6 +11,7 @@ templates:
   bin/pre-start.erb: bin/pre-start
   bin/post-start.erb: bin/post-start  
   bin/pre-stop.erb: bin/pre-stop
+  bin/post-stop.erb: bin/post-stop
   bin/post-deploy.erb: bin/post-deploy
   bin/drain.erb: bin/drain
   bin/ctl.erb: bin/ctl
