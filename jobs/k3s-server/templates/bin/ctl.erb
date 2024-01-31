@@ -74,6 +74,10 @@ case $1 in
     export FLAGS="$FLAGS --disable-kube-proxy"
 <% end %>
 
+<% if_p('k3s.etcd-expose-metrics') do |value| %>
+    export FLAGS="$FLAGS --etcd-expose-metrics=<%= value %>"
+<% end %>
+
 
 
 

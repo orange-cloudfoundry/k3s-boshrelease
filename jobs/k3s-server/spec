@@ -159,6 +159,11 @@ properties:
   k3s.embedded-ha-etcd:
     description: if set, use embedded etcd in ha mode. requires an odd number of servers, overrides datastore-endpoints
 
+  k3s.etcd-expose-metrics:
+    description: "Expose etcd metrics to client interface (default: false)"
+    default: false
+
+
   k3s.datastore-endpoint:
     description: Specify etcd, Mysql, Postgres, or Sqlite (default) data source name
 
